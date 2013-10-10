@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://xmlsn.jcp.org/jsf/html"
+  xmlns:f="http://xmlsn.jcp.org/jsf/core">
+  <h:head>
+    <title>日本の政令指定都市一覧</title>
+    <h:outputStylesheet library="css" name="list.css" />
+  </h:head>
+  <h:body>
+    <h:dataTable var="c" value="#{majorCity.cities}" columnClasses="no,pref,name,button" rowClasses="tr0,tr1">
+      <f:facet name="caption">日本の政令指定都市一覧</f:facet>
+      <h:column>
+        <f:facet name="header">No.</f:facet>
+        <h:outputText value="#{c.id}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">都道府県</f:facet>
+        <h:outputText value="#{c.pref}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">都市名</f:facet>
+        <h:outputText value="#{c.name}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header"></f:facet>
+        <h:form>
+          <div>
+            <h:commandButton action="#{majorCity.detail}" value="詳細" />
+            <h:inputHidden value="#{c.id}" binding="#{majorCity.id}" />
+          </div>
+        </h:form>
+      </h:column>
+    </h:dataTable>
+  </h:body>
+</html>

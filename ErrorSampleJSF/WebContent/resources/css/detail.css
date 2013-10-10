@@ -1,0 +1,22 @@
+table { margin : auto }
+
+caption {
+	font-size : 20pt;
+	color : #6a5acd
+}
+
+td {
+	width : 180px;
+	background-color : #e6e6fa;
+	color : #6a5acd;
+	font-size : 14pt
+}
+
+td.header {
+	width : auto;
+	background-color : #6a5acd;
+	color : #e6e6fa;
+	font-weight : bold
+}
+
+p { text-align : center }

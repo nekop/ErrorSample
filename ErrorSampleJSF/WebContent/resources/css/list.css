@@ -1,0 +1,33 @@
+table {
+	margin : auto;
+	border : 1px outset black
+}
+
+caption {
+	font-size : 20pt;
+	color : #008b8b
+}
+
+thead {
+	background-color : #008b8b;
+	color : #e6e6fa;
+	font-size : 14pt
+}
+
+th { border : 1px inset black }
+
+tr.tr0 { background-color : #b0e0e6 }
+tr.tr1 { background-color : #e6e6fa }
+
+td {
+	text-align : left;
+	border : 1px inset black
+}
+
+.no { width : 30px }
+.pref { width : 100px }
+.name { width : 120px }
+.button {
+	width : 80px;
+	text-align : center;
+}
